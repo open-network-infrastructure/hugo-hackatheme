@@ -1,0 +1,12 @@
+name = "Hackatheme"
+license = "MIT"
+licenselink = "https://github.com/open-network-infrastructure/hugo-hackatheme/blob/master/LICENSE"
+description = "A multilingual theme for time-bounded co-creation events such as hackathons, with a meta twist."
+homepage = "https://github.com/open-network-infrastructure/hugo-hackatheme/"
+tags = ["blog","responsive","personal","google analytics","portfolio","bootstrap","font awesome","projects","landing page"]
+features = ["blog","responsive","personal","google analytics","portfolio","bootstrap","font awesome","projects","landing page"]
+min_version = "0.31"
+
+[author]
+  name = "Gonzalo Casas"
+  homepage = "http://gnz.io"
