@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ absLangURL "/" }}">
-      {{ with .Site.Params.logoNavbar }}
-        <img src="{{ . | relURL }}" width="32" height="32" alt="">
-      {{ end }}
-    </a>
+    {{ with .Site.Params.logoNavbar }}
+      <a class="navbar-brand" href="{{ absLangURL "/" }}">
+        <img src="{{ . | relURL }}" width="30" height="30" alt="">
+      </a>
+    {{ end }}
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBarTarget" aria-controls="navigationBarTarget" aria-expanded="false" aria-label="{{ i18n "menu_toggle_navigation" }}">
       <span class="navbar-toggler-icon"></span>
@@ -34,14 +34,28 @@
 
         <!-- Language switcher  -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-uppercase waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">{{ .Language }}</a>
+          <a class="nav-link dropdown-toggle text-uppercase waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">{{ .Language }}</a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             {{ range $.Site.Home.AllTranslations }}
-              <a class="dropdown-item waves-effect waves-light" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+            <a class="dropdown-item waves-effect waves-light" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
             {{ end }}
           </div>
         </li>
+
+      </ul>
+
+      <!-- Highlighted nav bar buttons  -->
+      <ul class="navbar-nav smooth-scroll">
+        {{ range .Site.Menus.highlighted }}
+          <li class="nav-item">
+            <a class="navbar-btn" href="{{ .URL | relLangURL }}">
+              <button class="btn btn-black btn-md text-uppercase my-0 ml-lg-3">
+                {{ .Name }}
+              </button>
+            </a>
+          </li>
+        {{ end }}
       </ul>
     </div>
 
