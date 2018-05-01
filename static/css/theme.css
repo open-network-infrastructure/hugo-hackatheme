@@ -1,0 +1,44 @@
+body {
+  font-family:      "Fira Sans", sans-serif;
+  background-color: #F2F2F2;
+}
+
+.navbar {
+  font-weight:      200;
+  font-size:        0.9rem;
+  background-color: #0071BB44;
+}
+
+.top-nav-collapse {
+  background-color: #0071BBcc;
+}
+
+.event-primary {
+  background-color: #0071BB !important;
+}
+
+#intro {
+  height: 100%;
+  background-color:       #666;
+  background-attachment:  fixed;
+  background-position:    center center;
+  background-repeat:      no-repeat;
+  background-size:        cover;
+  -webkit-background-size:cover;
+  -moz-background-size:   cover;
+  -o-background-size:     cover;
+}
+
+#intro::after {
+  content: "";
+  background-image:       url('../images/grain.png');
+  background-attachment:  scroll;
+  background-position:    top left;
+  background-repeat:      repeat;
+  position:               absolute;
+  opacity:                .4;
+  top:                    0;
+  left:                   0;
+  bottom:                 0;
+  right:                  0;
+}
