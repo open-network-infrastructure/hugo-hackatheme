@@ -1,0 +1,6 @@
+{{ if .IsHome }}
+  {{ with .Site.Params.seo.verification.google }}<meta name="google-site-verification" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.seo.verification.bing }}<meta name="msvalidate.01" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.seo.verification.alexa }}<meta name="alexaVerifyID" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.seo.verification.yandex }}<meta name="yandex-verification" content="{{ . }}" />{{ end }}
+{{ end }}
