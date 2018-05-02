@@ -6,11 +6,11 @@ body {
 .navbar {
   font-weight:      200;
   font-size:        0.9rem;
-  background-color: #0071BB44;
+  background-color: rgba(0,113,188,0.26);
 }
 
 .top-nav-collapse {
-  background-color: #0071BBcc;
+  background-color: rgba(0,113,186,0.8);
 }
 
 .event-primary {
