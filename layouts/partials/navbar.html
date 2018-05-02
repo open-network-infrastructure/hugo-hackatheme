@@ -50,8 +50,11 @@
         {{ range .Site.Menus.highlighted }}
           <li class="nav-item">
             <a class="navbar-btn" href="{{ .URL | relLangURL }}">
-              <button class="btn btn-black btn-md text-uppercase my-0 ml-lg-3">
+              <button class="btn {{ .Pre }} btn-md text-uppercase my-0 ml-lg-3">
                 {{ .Name }}
+                {{ with .Post }}
+                  <i class="fa {{ . }} ml-2"></i>
+                {{ end }}
               </button>
             </a>
           </li>
