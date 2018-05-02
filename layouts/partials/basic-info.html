@@ -3,21 +3,38 @@
     <div class="col-sm-12">
 
       <!-- Card -->
-      <div class="card card-free-bird">
+      <div class="card card-free-bird mb-3">
         <img class="card-img-top px-3 pt-4 pb-2" src="/images/header.png" alt="Header">
 
         <div class="card-body text-center">
-          <h1 class="card-title text-uppercase event-primary-text">
+          <h2 class="card-title text-uppercase event-primary-text">
             <b>{{ i18n "basicinfo_claim" }}</b>
-          </h1>
-          <h2 class="text-uppercase">
-            <b>{{ i18n "basicinfo_date"}}</b>
           </h2>
+          <h3 class="text-uppercase pb-5">
+            <b>{{ i18n "basicinfo_date"}}</b>
+          </h3>
 
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perspiciatis voluptatum a, quo nobis,
-            non commodi quia repellendus sequi nulla voluptatem dicta reprehenderit, placeat laborum ut beatae ullam suscipit
-            veniam.
-          </p>
+          <div class="row justify-content-md-center">
+            <div class="col-md-5 text-left">
+              <h4 class="text-uppercase"><b>{{ i18n "basicinfo_what_is_it_title" }}</b></h4>
+              <p class="card-text">{{ i18n "basicinfo_what_is_it" | markdownify }}</p>
+
+              <h4 class="text-uppercase pt-5"><b>{{ i18n "basicinfo_when_where_title" }}</b></h4>
+              <p class="card-text">{{ i18n "basicinfo_when_where" | markdownify }}</p>
+            </div>
+
+            <div class="col-md-5 text-left">
+              <p class="card-text mt-3 pt-4">{{ i18n "basicinfo_organizers" | markdownify }}</p>
+              <p class="text-center">
+                {{ range .Site.Params.organizers }}
+                  <a href="{{ .Url }}" target="_blank">
+                    <img class="w-75" src="{{ .Logo }}" title="{{ .Title }}">
+                  </a>
+                {{ end }}
+              </p>
+            </div>
+
+          </div>
 
         </div>
       </div>
