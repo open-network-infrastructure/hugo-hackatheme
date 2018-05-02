@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+{
+  "@context": "http://www.schema.org",
+  "@type": "Event",
+  "name": "{{ .Site.Params.eventName }}",
+  "url": "{{ "/" | absURL }}",
+  "description": "{{ .Site.Params.eventSlogan }}",
+  "startDate": "{{ dateFormat "2006-01-02" .Site.Params.dateStart  }}",
+  "endDate": "{{ dateFormat "2006-01-02" .Site.Params.dateEnd  }}",
+  "image": "{{ .Site.Params.logoHero | absURL }}",
+  "location": {
+    "@type": "Place",
+    "name": "{{ .Site.Params.venueName }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ .Site.Params.venueStreet }}",
+      "addressLocality": "{{ .Site.Params.venueCity }}",
+      "addressRegion": "{{ .Site.Params.venueState }}",
+      "postalCode": "{{ .Site.Params.venueZipCode }}",
+      "addressCountry": "{{ .Site.Params.venueCountry }}"
+    }
+  }
+}
+ </script>
