@@ -17,6 +17,10 @@ body {
   background-color: #0071BB !important;
 }
 
+.event-primary-text {
+  color: #0071BB;
+}
+
 #intro {
   height: 100%;
   background-color:       #666;
