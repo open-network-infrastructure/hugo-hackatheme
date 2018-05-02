@@ -1,0 +1,29 @@
+{{ define "hero-view" }}
+  <div id="intro" class="view" style="background-image: url('{{ .Site.Params.backgroundHero }}')">
+    <div class="full-bg-img">
+      <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-sm-12">
+
+            <img src="{{ .Site.Params.logoHero | relURL }}" class="d-inline w-50" alt="{{ .Site.Params.eventName }}" />
+            <p class="my-4 white-text">{{ .Site.Params.eventSlogan }}</p>
+
+            {{ range .Site.Menus.hero }}
+              <a href="{{ .URL | relLangURL }}">
+                <button type="button" class="btn {{ .Pre }}">{{ .Name }}
+                  {{ with .Post }}
+                    <i class="fa {{ . }} ml-2"></i>
+                  {{ end }}
+                </button>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "basic-info.html" . }}
+{{ end }}
