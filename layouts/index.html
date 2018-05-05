@@ -6,7 +6,7 @@
           <div class="col-sm-12">
 
             <img src="{{ .Site.Params.logoHero | relURL }}" class="d-inline w-50" alt="{{ .Site.Params.eventName }}" />
-            <p class="my-4 white-text">{{ .Site.Params.eventSlogan }}</p>
+            <p class="my-4 white-text">{{ .Site.Params.eventSlogan | markdownify }}</p>
 
             {{ range .Site.Menus.hero }}
               <a href="{{ .URL | relLangURL }}">

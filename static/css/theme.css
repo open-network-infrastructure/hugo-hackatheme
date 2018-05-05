@@ -50,3 +50,8 @@ body {
 .card-free-bird {
   margin-top: -50px;
 }
+
+/* Typewriter text rotation */
+.typewriter-text-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
