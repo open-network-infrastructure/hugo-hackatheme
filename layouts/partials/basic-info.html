@@ -11,7 +11,16 @@
             <b>{{ i18n "basicinfo_claim" }}</b>
           </h2>
           <h3 class="text-uppercase pb-5">
-            <b>{{ i18n "basicinfo_date"}}</b>
+            <b>
+              {{ $startMonth := (.Param "dateStart").Month }}
+              {{ $endMonth := (.Param "dateEnd").Month }}
+              {{ if eq $startMonth $endMonth }}
+                 {{ (.Param "dateStart").Format "January 2" }}-{{ (.Param "dateEnd").Format "2" -}}
+              {{ else }}
+                {{ (.Param "dateStart").Format "January 2" }}-{{ (.Param "dateEnd").Format "January 2" -}}
+              {{ end }},
+              {{ (.Param "dateStart").Format "2006" }}
+            </b>
           </h3>
 
           <div class="row justify-content-md-center">
