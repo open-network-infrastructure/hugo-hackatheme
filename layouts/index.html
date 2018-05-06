@@ -5,8 +5,8 @@
         <div class="row d-flex justify-content-center text-center">
           <div class="col-sm-12">
 
-            <img src="{{ .Site.Params.Styling.logoHero | relURL }}" class="d-inline w-50" alt="{{ .Site.Params.eventName | markdownify }}" />
-            <p class="my-4 white-text">{{ .Site.Params.eventSlogan | markdownify }}</p>
+            <img src="{{ .Site.Params.Styling.logoHero | relURL }}" class="d-inline w-50" alt="{{ i18n "event_name" | markdownify }}" />
+            <p class="my-4 white-text">{{ i18n "event_slogan" | markdownify }}</p>
 
             {{ range .Site.Menus.hero }}
               <a href="{{ .URL | relLangURL }}">

@@ -2,9 +2,9 @@
 {
   "@context": "http://www.schema.org",
   "@type": "Event",
-  "name": "{{ .Site.Params.eventName | plainify }}",
+  "name": "{{ .Site.Title }}",
   "url": "{{ "/" | absURL }}",
-  "description": "{{ .Site.Params.eventSlogan | plainify }}",
+  "description": "{{ i18n "event_slogan" | plainify }}",
   "startDate": "{{ dateFormat "2006-01-02" .Site.Params.dateStart }}",
   "endDate": "{{ dateFormat "2006-01-02" .Site.Params.dateEnd }}",
   "image": "{{ .Site.Params.Styling.logoHero | absURL }}"

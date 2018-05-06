@@ -7,16 +7,14 @@
       <!--First column-->
       <div class="col-md-4 mb-5">
         <h6 class="text-uppercase font-weight-bold">
-          {{ .Site.Params.eventName | plainify }}
+          {{ i18n "event_name" | plainify }}
         </h6>
         <hr class="event-primary-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p class="mx-md-auto mx-5">
-          {{ with i18n "basicinfo_organizers" }}
+        {{ with i18n "basicinfo_organizers" | default (i18n "event_slogan") }}
+          <p class="mx-md-auto mx-5">
             {{ . | markdownify }}
-          {{ else }}
-            {{ .Site.Params.eventSlogan | markdownify }}
-          {{ end }}
-        </p>
+          </p>
+        {{ end }}
       </div>
 
       <!--Second column-->
@@ -64,7 +62,7 @@
       {{ i18n "footer_template_link" | markdownify }}
     </p>
 
-    &copy; {{ .Site.Params.eventName | plainify -}}
+    &copy; {{ i18n "event_name" | plainify -}}
     {{ with .Site.Params.license -}}
       , <a href="{{ .url }}" target="_blank">{{ .name }}</a>
     {{ end }}
