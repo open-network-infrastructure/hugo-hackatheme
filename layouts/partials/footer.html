@@ -38,7 +38,7 @@
           {{ i18n "footer_contact" }}
         </h6>
         <hr class="event-primary-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        {{ with .Site.Data.event.hashtag }}
+        {{ with .Site.Params.hashtag }}
           <p>
             <a href="https://twitter.com/search/?q=%23{{ . | urlize }}" target="_blank">
               <i class="fa fa-hashtag mr-3"></i> #{{ . }}
@@ -65,7 +65,7 @@
     </p>
 
     &copy; {{ .Site.Params.eventName | plainify -}}
-    {{ with .Site.Data.event.license -}}
+    {{ with .Site.Params.license -}}
       , <a href="{{ .url }}" target="_blank">{{ .name }}</a>
     {{ end }}
   </div>

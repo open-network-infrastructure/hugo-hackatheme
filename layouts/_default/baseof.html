@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {{ with .Site.Params.ThemeColor }}
+  {{ with .Site.Params.Styling.ThemeColor }}
   <meta name="msapplication-TileColor" content="{{ . }}">
   <meta name="theme-color" content="{{ . }}">{{ end }}
   {{ partial "meta/site-verification" . }}
@@ -33,7 +33,7 @@
   <!-- Hackatheme CSS -->
   <link rel="stylesheet" href="{{ "/css/theme.css" | relURL }}">
   <!-- Custom CSS -->
-  {{ with .Site.Params.customCSS }}
+  {{ with .Site.Params.Styling.customCSS }}
   <link rel="stylesheet" href="{{ . | relURL }}">
   {{ end }}
 

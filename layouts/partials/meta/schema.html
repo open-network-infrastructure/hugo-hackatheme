@@ -5,20 +5,29 @@
   "name": "{{ .Site.Params.eventName | plainify }}",
   "url": "{{ "/" | absURL }}",
   "description": "{{ .Site.Params.eventSlogan | plainify }}",
-  "startDate": "{{ dateFormat "2006-01-02" .Site.Data.event.dateStart }}",
-  "endDate": "{{ dateFormat "2006-01-02" .Site.Data.event.dateEnd }}",
-  "image": "{{ .Site.Params.logoHero | absURL }}",
-  "location": {
-    "@type": "Place",
-    "name": "{{ .Site.Data.event.venue.name }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ .Site.Data.event.venue.street }}",
-      "addressLocality": "{{ .Site.Data.event.venue.city }}",
-      "addressRegion": "{{ .Site.Data.event.venue.state }}",
-      "postalCode": "{{ .Site.Data.event.venue.zipCode }}",
-      "addressCountry": "{{ .Site.Data.event.venue.country }}"
+  "startDate": "{{ dateFormat "2006-01-02" .Site.Params.dateStart }}",
+  "endDate": "{{ dateFormat "2006-01-02" .Site.Params.dateEnd }}",
+  "image": "{{ .Site.Params.Styling.logoHero | absURL }}"
+  {{- with .Site.Params.venue }},
+    "location": {
+      "@type": "Place",
+      "name": "{{ .name }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .street }}",
+        "addressLocality": "{{ .city }}",
+        "addressRegion": "{{ .state }}",
+        "postalCode": "{{ .zipcode }}",
+        "addressCountry": "{{ .country }}"
+      }
+      {{- with .coords }},
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": {{ .latitude }},
+          "longitude": {{ .longitude }}
+        }
+      {{ end }}
     }
-  }
+  {{ end }}
 }
  </script>

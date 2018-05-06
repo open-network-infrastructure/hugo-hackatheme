@@ -1,11 +1,11 @@
 {{ define "hero-view" }}
-  <div id="intro" class="view" style="background-image: url('{{ .Site.Params.backgroundHero }}')">
+  <div id="intro" class="view" style="background-image: url('{{ .Site.Params.Styling.backgroundHero }}')">
     <div class="full-bg-img">
       <div class="container-fluid d-flex align-items-center justify-content-center h-100">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-sm-12">
 
-            <img src="{{ .Site.Params.logoHero | relURL }}" class="d-inline w-50" alt="{{ .Site.Params.eventName | markdownify }}" />
+            <img src="{{ .Site.Params.Styling.logoHero | relURL }}" class="d-inline w-50" alt="{{ .Site.Params.eventName | markdownify }}" />
             <p class="my-4 white-text">{{ .Site.Params.eventSlogan | markdownify }}</p>
 
             {{ range .Site.Menus.hero }}
