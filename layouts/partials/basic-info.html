@@ -24,8 +24,13 @@
           </h3>
 
           <div class="row justify-content-md-center">
-            <div class="col-md-5 text-left">
+            <div class="col-md-10 text-left">
               <h4 class="text-uppercase"><b>{{ i18n "basicinfo_what_is_it_title" }}</b></h4>
+            </div>
+          </div>
+
+          <div class="row justify-content-md-center">
+            <div class="col-md-5 text-left">
               <p class="card-text">{{ i18n "basicinfo_what_is_it" | markdownify }}</p>
 
               <h4 class="text-uppercase pt-5"><b>{{ i18n "basicinfo_when_where_title" }}</b></h4>
@@ -33,11 +38,11 @@
             </div>
 
             <div class="col-md-5 text-left">
-              <p class="card-text mt-3 pt-4">{{ i18n "basicinfo_organizers" | markdownify }}</p>
+              <p class="card-text">{{ i18n "basicinfo_organizers" | markdownify }}</p>
               <p class="text-center">
-                  <a href="{{ .Url }}" target="_blank">
-                    <img class="w-75" src="{{ .Logo }}" title="{{ .Title }}">
                 {{ range .Site.Data.event.organizers }}
+                  <a href="{{ .url }}" target="_blank">
+                    <img class="w-75" src="{{ .logo }}" title="{{ .name }}">
                   </a>
                 {{ end }}
               </p>
