@@ -1,2 +1,20 @@
 [basicinfo_claim]
-other = "[One catchy line of your event]"
+other = "[One catchy tagline for your event]"
+
+[basicinfo_organizers]
+other = """[Paragraph describing briefly who are
+the organizers of the event]."""
+
+[footer_links]
+other = "Links"
+
+[footer_contact]
+other = "Contact"
+
+[footer_run_similar_event]
+other = "Wanna organize this in your city?"
+
+[footer_template_link]
+other = """Check out the
+[template & guide](https://github.com/open-network-infrastructure/hugo-hackatheme).
+"""

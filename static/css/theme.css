@@ -47,6 +47,10 @@ body {
   right:                  0;
 }
 
+footer.page-footer .footer-copyright {
+  font-size: 0.8rem;
+}
+
 .card-free-bird {
   margin-top: -50px;
 }
