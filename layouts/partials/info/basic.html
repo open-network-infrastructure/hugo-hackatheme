@@ -33,11 +33,11 @@
             <div class="col-md-5 text-left">
               <p class="card-text">{{ i18n "basicinfo_what_is_it" | markdownify }}</p>
 
-              <h4 class="text-uppercase pt-5"><b>{{ i18n "basicinfo_when_where_title" }}</b></h4>
+              <h4 class="text-uppercase pt-3 pt-md-5"><b>{{ i18n "basicinfo_when_where_title" }}</b></h4>
               <p class="card-text">{{ i18n "basicinfo_when_where" | markdownify }}</p>
             </div>
 
-            <div class="col-md-5 text-left">
+            <div class="col-md-5 text-left pt-2 pt-md-0">
               <p class="card-text">{{ i18n "basicinfo_organizers" | markdownify }}</p>
               <p class="text-center">
                 {{ range .Site.Data.event.organizers }}
