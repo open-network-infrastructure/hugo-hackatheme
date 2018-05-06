@@ -15,6 +15,4 @@ other = "Contact"
 other = "Wanna organize this in your city?"
 
 [footer_template_link]
-other = """Check out the
-[template & guide](https://github.com/open-network-infrastructure/hugo-hackatheme).
-"""
+other = "Check out the [template & guide](https://github.com/open-network-infrastructure/hugo-hackatheme)."
