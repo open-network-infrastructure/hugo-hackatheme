@@ -12,14 +12,14 @@
           </h2>
           <h3 class="text-uppercase pb-5">
             <b>
-              {{ $startMonth := (.Param "dateStart").Month }}
-              {{ $endMonth := (.Param "dateEnd").Month }}
+              {{ $startMonth := dateFormat "January" .Site.Data.event.dateStart }}
+              {{ $endMonth := dateFormat "January" .Site.Data.event.dateEnd }}
               {{ if eq $startMonth $endMonth }}
-                 {{ (.Param "dateStart").Format "January 2" }}-{{ (.Param "dateEnd").Format "2" -}}
+                 {{ dateFormat "January 2" .Site.Data.event.dateStart }}-{{ dateFormat "2" .Site.Data.event.dateEnd -}}
               {{ else }}
-                {{ (.Param "dateStart").Format "January 2" }}-{{ (.Param "dateEnd").Format "January 2" -}}
+                {{ dateFormat "January 2" .Site.Data.event.dateStart }}-{{ dateFormat "January 2" .Site.Data.event.dateEnd -}}
               {{ end }},
-              {{ (.Param "dateStart").Format "2006" }}
+              {{ dateFormat "2006" .Site.Data.event.dateStart }}
             </b>
           </h3>
 
@@ -35,9 +35,9 @@
             <div class="col-md-5 text-left">
               <p class="card-text mt-3 pt-4">{{ i18n "basicinfo_organizers" | markdownify }}</p>
               <p class="text-center">
-                {{ range .Site.Params.organizers }}
                   <a href="{{ .Url }}" target="_blank">
                     <img class="w-75" src="{{ .Logo }}" title="{{ .Title }}">
+                {{ range .Site.Data.event.organizers }}
                   </a>
                 {{ end }}
               </p>

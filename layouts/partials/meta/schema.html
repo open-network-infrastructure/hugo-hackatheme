@@ -2,22 +2,22 @@
 {
   "@context": "http://www.schema.org",
   "@type": "Event",
-  "name": "{{ .Site.Params.eventName }}",
+  "name": "{{ .Site.Params.eventName | plainify }}",
   "url": "{{ "/" | absURL }}",
-  "description": "{{ .Site.Params.eventSlogan }}",
-  "startDate": "{{ dateFormat "2006-01-02" .Site.Params.dateStart  }}",
-  "endDate": "{{ dateFormat "2006-01-02" .Site.Params.dateEnd  }}",
+  "description": "{{ .Site.Params.eventSlogan | plainify }}",
+  "startDate": "{{ dateFormat "2006-01-02" .Site.Data.event.dateStart }}",
+  "endDate": "{{ dateFormat "2006-01-02" .Site.Data.event.dateEnd }}",
   "image": "{{ .Site.Params.logoHero | absURL }}",
   "location": {
     "@type": "Place",
-    "name": "{{ .Site.Params.venueName }}",
+    "name": "{{ .Site.Data.event.venue.name }}",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "{{ .Site.Params.venueStreet }}",
-      "addressLocality": "{{ .Site.Params.venueCity }}",
-      "addressRegion": "{{ .Site.Params.venueState }}",
-      "postalCode": "{{ .Site.Params.venueZipCode }}",
-      "addressCountry": "{{ .Site.Params.venueCountry }}"
+      "streetAddress": "{{ .Site.Data.event.venue.street }}",
+      "addressLocality": "{{ .Site.Data.event.venue.city }}",
+      "addressRegion": "{{ .Site.Data.event.venue.state }}",
+      "postalCode": "{{ .Site.Data.event.venue.zipCode }}",
+      "addressCountry": "{{ .Site.Data.event.venue.country }}"
     }
   }
 }
