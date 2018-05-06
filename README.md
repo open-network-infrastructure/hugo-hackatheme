@@ -2,11 +2,22 @@
 
 > A multilingual theme for time-bounded co-creation events such as hackathons, with a meta twist.
 
-**Hackatheme** is a Hugo theme designed to ease the organization of a hackathon and similar time-bounded events and publish it online.
-
-It includes lots of open source delights, a sprinkle of stardust and plenty of chocolate chips 🍪.
+**Hackatheme** is a Hugo theme designed to ease the organization of hackathons and similar time-bounded events. It includes lots of open source delights, a sprinkle of stardust and plenty of chocolate chips 🍪.
 
 It is also a **meta-project** in the sense that it includes documentation on how to replicate itself.
+
+## Features
+
+* Tailored to run time-bounded co-creation events (hackathons, maker events, etc)
+* Multilingual support
+* Responsive design
+* [Schema.org](http://schema.org/Event) support
+* Customizable landing page
+  * Challenges
+  * Schedule
+  * Location map
+* Event guidelines
+* Sponsors/partners list
 
 ## Installation
 
