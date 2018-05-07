@@ -18,6 +18,7 @@ It is also a **meta-project** in the sense that it includes documentation on how
   * Location map
 * Event guidelines
 * Sponsors/partners list
+* Press kit
 
 ## Installation
 
