@@ -1,3 +1,4 @@
+# Translations for the 'Basic info' section
 [basicinfo_claim]
 other = "[One catchy tagline for your event]"
 
@@ -16,3 +17,10 @@ other = "Wanna organize this in your city?"
 
 [footer_template_link]
 other = "Check out the [template & guide](https://github.com/open-network-infrastructure/hugo-hackatheme)."
+
+# Generic site-wide translations
+[read_more]
+other = "Read more details"
+
+[download]
+other = "Download"

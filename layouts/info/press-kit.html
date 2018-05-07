@@ -1,0 +1,59 @@
+{{ define "hero-view" }}
+  {{ partial "page-hero-view.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main">
+
+  <section class="container info">
+    <div class="row">
+      <div class="col-lg-9">
+        <!-- Card -->
+        <div class="card free-bird">
+          {{ with .Params.ImageHeader | default "/images/header-single.jpg" }}
+            <img class="card-img-top" src="{{ . }}" alt="Header">
+          {{ end }}
+          <div class="card-body">
+            <h2 class="card-title mx-lg-5 text-uppercase event-primary-text">
+              <a href="{{ .Permalink }}" rel="bookmark"><b>{{ .Title }}</b></a>
+            </h2>
+
+            <article class="card-text mx-lg-5 my-2">
+              {{ .Content }}
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9 card-columns">
+
+        {{ range .Site.Params.presskit }}
+          <div class="card my-3 p-4 text-center {{ .class }}">
+            <a href="{{ .download }}">
+              <p class="card-title text-uppercase {{ .classText | default "black-text"}}">
+                <b>{{ .name }}</b>
+              </p>
+              <div class="view overlay flex-center">
+                <img src="{{ .logo }}" class="img-fluid pb-4" alt="zoom">
+                <div class="mask flex-center waves-effect waves-light rgba-blue-strong">
+                  <p class="white-text">{{ i18n "download" }}</p>
+                </div>
+              </div>
+              <button type="button" class="btn event-primary-color waves-effect waves-light">
+                {{ i18n "download" }}
+                <i class="fa fa-download ml-2"></i>
+              </button>
+            </a>
+          </div>
+        {{ end }}
+
+    </div>
+  </div>
+
+  </section>
+
+</main>
+{{ end }}
