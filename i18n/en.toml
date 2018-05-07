@@ -6,6 +6,13 @@ other = "[One catchy tagline for your event]"
 other = """[Paragraph describing briefly who are
 the organizers of the event]."""
 
+[basicinfo_what_is_it_title]
+other = "What is it?"
+
+[basicinfo_when_where_title]
+other = "When and where?"
+
+# Translations for the 'Footer' section
 [footer_links]
 other = "Links"
 

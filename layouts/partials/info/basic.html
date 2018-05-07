@@ -50,6 +50,19 @@
 
           </div>
 
+          {{ with .Site.GetPage "page" "about" }}
+            <div class="row">
+              <div class="col-12 text-center">
+                <a href="{{ .Permalink }}">
+                  <button type="button" class="btn event-primary-color my-4 waves-effect waves-light" >
+                      {{ i18n "read_more" }}
+                      <i class="fa fa-question-circle ml-2"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+          {{ end }}
+
         </div>
       </div>
 
