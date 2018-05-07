@@ -21,7 +21,7 @@ body {
   color: #0071BB;
 }
 
-#intro {
+#intro, .page-hero-view {
   height: 100%;
   background-color:       #666;
   background-attachment:  fixed;
@@ -47,12 +47,21 @@ body {
   right:                  0;
 }
 
+.page-hero-view {
+  height: 200px;
+}
+
 footer.page-footer .footer-copyright {
   font-size: 0.8rem;
 }
 
 .card-free-bird {
   margin-top: -50px;
+}
+
+.info .card .card-body .card-text {
+  font-weight: 300;
+  color: black;
 }
 
 /* Typewriter text rotation */

@@ -1,0 +1,34 @@
+{{ define "hero-view" }}
+  {{ partial "page-hero-view.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main">
+
+  <section class="container info">
+    <div class="row">
+      <div class="col-lg-9">
+        <!-- Card -->
+        <div class="card free-bird mb-5">
+          {{ with .Params.ImageHeader | default "/images/header-single.jpg" }}
+            <img class="card-img-top" src="{{ . }}" alt="Header">
+          {{ end }}
+          <div class="card-body">
+            <h2 class="card-title mx-lg-5 text-uppercase event-primary-text">
+              <a href="{{ .Permalink }}" rel="bookmark"><b>{{ .Title }}</b></a>
+            </h2>
+
+            <article class="card-text mx-lg-5 my-2">
+              {{ .Content }}
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{{ end }}
