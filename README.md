@@ -15,7 +15,7 @@ It is also a **meta-project** in the sense that it includes documentation on how
 * Customizable landing page
   * Challenges
   * Schedule
-  * Location map
+  * Location map (via MapBox)
 * Event guidelines
 * Sponsors/partners list
 * Press kit

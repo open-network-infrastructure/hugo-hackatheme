@@ -1,0 +1,36 @@
+{{ with .Site.Params.venue }}
+    <!-- Venue -->
+    <section id="venue" class="container">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="card my-3">
+            <div class="row">
+              <div class="col-md-9 text-right">
+                {{ if .coords }}
+                <img class="w-100" src="https://api.mapbox.com/v4/mapbox.{{ .mapboxstyle }}/pin-l-triangle+285A98({{ .coords.longitude }},{{ .coords.latitude }})/{{ .coords.longitude }},{{ .coords.latitude }},{{ .mapboxzoom }}/600x300@2x.png?access_token={{ .mapboxpublictoken }}"
+                  alt="{{ .name }}">
+                {{ end }}
+              </div>
+              <div class="col-md-3 my-5">
+                <h3 class="mx-3 event-primary-text">
+                  <b>{{ .name }}</b>
+                </h3>
+                <p class="mx-3 small">
+                  {{ .street }}
+                  <br/> {{ .zipcode }} {{ .city }}
+                  <br/> {{ .country }}
+                </p>
+
+                {{ if .coords }}
+                  <p class="small mx-3 my-0">© <a href='https://www.mapbox.com/map-feedback/'>Mapbox</a></p>
+                  <p class="small mx-3 my-0">© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a></p>
+                {{ end }}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+{{ end }}
