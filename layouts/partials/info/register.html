@@ -1,0 +1,35 @@
+{{ with .Site.GetPage "page" "register" }}
+
+<section id="register" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <div class="card my-3">
+        <div class="card-body text-center">
+          <h2 class="card-title text-uppercase event-primary-text">
+            <b>{{ .Title }}</b>
+          </h2>
+
+          <div class="card-text">
+             {{ .Content | markdownify }}
+          </div>
+
+          {{ if .Site.Params.registration.registrationForm }}
+            <div class="row">
+              <div class="col-12 text-center">
+                <a href="{{ .Site.Params.registration.registrationForm }}" target="_blank">
+                  <button type="button" class="btn event-primary-color my-4 waves-effect waves-light">
+                    {{ .Title }}
+                    <i class="fa fa-sign-in ml-2"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
