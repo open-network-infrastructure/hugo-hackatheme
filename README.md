@@ -19,6 +19,7 @@ It is also a **meta-project** in the sense that it includes documentation on how
 * Event guidelines
 * Sponsors/partners list
 * Press kit
+* Google Analytics
 
 ## Installation
 
