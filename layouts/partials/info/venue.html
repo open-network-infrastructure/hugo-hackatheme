@@ -8,8 +8,10 @@
             <div class="row">
               <div class="col-md-9 text-right">
                 {{ if .coords }}
-                <img class="w-100" src="https://api.mapbox.com/v4/mapbox.{{ .mapboxstyle }}/pin-l-triangle+285A98({{ .coords.longitude }},{{ .coords.latitude }})/{{ .coords.longitude }},{{ .coords.latitude }},{{ .mapboxzoom }}/600x300@2x.png?access_token={{ .mapboxpublictoken }}"
-                  alt="{{ .name }}">
+                <a href="https://www.openstreetmap.org/#map={{ .mapboxzoom }}/{{ .coords.latitude }}/{{ .coords.longitude }}" target="_blank">
+                  <img class="w-100" src="https://api.mapbox.com/v4/mapbox.{{ .mapboxstyle }}/pin-l-triangle+285A98({{ .coords.longitude }},{{ .coords.latitude }})/{{ .coords.longitude }},{{ .coords.latitude }},{{ .mapboxzoom }}/600x300@2x.png?access_token={{ .mapboxpublictoken }}"
+                    alt="{{ .name }}">
+                </a>
                 {{ end }}
               </div>
               <div class="col-md-3 my-5">
