@@ -1,0 +1,52 @@
+<section id="challenges" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <!-- Card -->
+      <div class="card mb-3">
+        <div class="card-body">
+
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 pt-4">
+              <h3 class="card-title text-uppercase">
+                <b>{{ i18n "challenges_title" }}</b>
+              </h3>
+            </div>
+          </div>
+
+          <div class="row justify-content-md-center">
+            <div class="col-md-10 card-text text-left pt-2 pt-md-0">
+              {{ i18n "challenges_intro" | markdownify }}
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-container w-100" style="height: 400px">
+          <div class="swiper-wrapper">
+            {{ range .Site.Params.challenges }}
+              <div class="swiper-slide challenge">
+                <img class="challenge-image" src="{{ .image | relURL }}" >
+
+                <div class="challenge-body">
+                  <div class="challenge-title">
+                    <h4>{{ i18n ( printf "challenges_%s_%s" .i18n "title" )}}</h4>
+                    <h5>{{ i18n "challenge" }}</h5>
+                  </div>
+                  <div class="challenge-text">
+                    {{ i18n ( printf "challenges_%s_%s" .i18n "description" ) | markdownify}}
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

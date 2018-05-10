@@ -75,3 +75,95 @@ footer.page-footer .footer-copyright {
   -moz-column-count: 2; /* Firefox */
   column-count: 2;
 }
+
+/* Challenge swiper */
+.swiper-pagination-bullet {
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color:#ccc;
+  opacity: 1;
+  background: rgba(0,0,0,0.6);
+}
+
+.swiper-pagination-bullet-active {
+  color:#fff;
+  background-color: #0071BB;
+}
+
+.challenge {
+  background-color: white; }
+  @media (min-width: 992px) {
+    .challenge {
+      background-color: #434343;
+    }
+  }
+
+  .challenge .challenge-image {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    height: auto; }
+    @media (min-width: 992px) {
+      .challenge .challenge-image {
+        border-left: 28px solid black;
+        width: auto;
+        height: 100%;
+      }
+    }
+  .challenge .challenge-title {
+    position: relative;
+    margin-top: 5rem;
+    z-index: 1;
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.7); }
+    @media (min-width: 992px) {
+      .challenge .challenge-title {
+        width: 60%;
+      }
+    }
+  .challenge .challenge-title h4 {
+    padding: 1rem 0 0 3rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0; }
+    @media (min-width: 992px) {
+      .challenge .challenge-title h4 {
+        font-size: 2rem;
+      }
+    }
+  .challenge .challenge-title h5 {
+    padding: 0 0 1rem 3rem;
+    margin: -0.4rem 0 0 0;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #939393; }
+    @media (min-width: 992px) {
+      .challenge .challenge-title h5 {
+        margin: -0.7rem 0 0 0;
+        font-size: 1.3rem;
+        font-weight: 100;
+      }
+    }
+  .challenge .challenge-text {
+    position: relative;
+    z-index: 3;
+    padding: 2rem 3rem 2rem 3rem;
+    font-size: 0.9rem;
+    color: white;
+    background-color: rgba(0,0,0,0.9);
+  }
+  @media (min-width: 992px) {
+    .challenge .challenge-text {
+      padding: 1rem 0 2rem 3rem;
+      width: 25%;
+      background-color: transparent;
+    }
+  }
+

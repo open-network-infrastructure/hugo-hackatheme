@@ -28,6 +28,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="{{ "/css/mdb.css" | relURL }}">
   <!-- Hackatheme CSS -->
@@ -64,6 +66,8 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <!-- Swiper Javascript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
 
   <!-- Based on https://codepen.io/CheeseTurtle/pen/jzdgI -->
   <script type="text/javascript">
@@ -109,6 +113,7 @@
     };
 
     document.addEventListener('DOMContentLoaded', function () {
+      // Initialize typewriter text rotation
       var elements = document.getElementsByClassName('typewriter-text-rotate');
       for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-rotate');
@@ -117,6 +122,25 @@
           new TypewriterText(elements[i], JSON.parse(toRotate), period);
         }
       }
+
+      // Initialize swiper
+      var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 2500
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
     }, false);
   </script>
 
