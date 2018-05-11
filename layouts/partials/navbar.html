@@ -32,6 +32,7 @@
           </li>
         {{ end }}
 
+        {{ if gt (len $.Site.Home.AllTranslations) 1 }}
         <!-- Language switcher  -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-uppercase waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -42,6 +43,7 @@
             {{ end }}
           </div>
         </li>
+        {{ end }}
 
       </ul>
 
