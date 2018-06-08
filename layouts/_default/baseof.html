@@ -6,13 +6,13 @@
   {{ else }}
     <title>{{ .Title }} | {{ .Site.Title }}</title>
   {{ end }}
-  <meta name="twitter:card" value="{{ .Title }}">
   <meta property="og:title" content="{{ .Title }}" />
 
   {{ with .Description | default (i18n "event_slogan" | plainify) }}
     <meta name="description" content="{{ . }}">
     <meta property="og:description" content="{{ . }}" />
   {{ end }}
+  <meta name="twitter:card" value="summary">
   <meta property="og:type" content="website" />
 
   {{ with .Site.Params.Styling.externalImage | absURL }}
