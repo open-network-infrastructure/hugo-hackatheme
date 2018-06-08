@@ -1,0 +1,41 @@
+<!-- Challenges -->
+<section id="challenges" class="container">
+  {{ if .Site.Params.partners.sponsors }}
+  <div class="card my-3">
+    <div class="card-body">
+      <h3 class="card-title text-center text-uppercase">
+        <b>{{ i18n "sponsors-partners" }}</b>
+      </h3>
+
+      <div class="row text-center">
+        {{ range .Site.Params.partners.sponsors }}
+          <div class="col-md-3 align-middle">
+            <a href="{{ .url }}" target="_blank"><img class="{{ .class }}" src="{{ .logo }}" alt="{{ .name }}"></a>
+          </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if .Site.Params.partners.community }}
+  <div class="card my-3">
+    <div class="card-body">
+      <h3 class="card-title text-center text-uppercase">
+        <b>{{ i18n "community-partners" }}</b>
+      </h3>
+
+      <div class="row text-center">
+        {{ range .Site.Params.partners.community }}
+          <div class="col-md-3 align-middle">
+            <a href="{{ .url }}" target="_blank"><img class="{{ .class }}" src="{{ .logo }}" alt="{{ .name }}"></a>
+          </div>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+  {{ end }}
+
+</section>

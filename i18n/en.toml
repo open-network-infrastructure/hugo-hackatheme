@@ -35,3 +35,8 @@ other = "Download"
 [schedule]
 other = "Schedule"
 
+[sponsors-partners]
+other = "Sponsors and Partners"
+
+[community-partners]
+other = "Community partners"
