@@ -6,21 +6,32 @@
   {{ else }}
     <title>{{ .Title }} | {{ .Site.Title }}</title>
   {{ end }}
+  <meta name="twitter:card" value="{{ .Title }}">
+  <meta property="og:title" content="{{ .Title }}" />
 
-  {{ with .Description | default .Site.Params.description }}
-  <meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Description | default (i18n "event_slogan" | plainify) }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}" />
+  {{ end }}
+  <meta property="og:type" content="website" />
+
+  {{ with .Site.Params.Styling.externalImage | absURL }}
+    <meta property="og:image" content="{{ . }}" />
+  {{ end }}
+
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ with .Site.Params.Styling.ThemeColor }}
-  <meta name="msapplication-TileColor" content="{{ . }}">
-  <meta name="theme-color" content="{{ . }}">{{ end }}
+    <meta name="msapplication-TileColor" content="{{ . }}">
+    <meta name="theme-color" content="{{ . }}">{{ end }}
   {{ partial "meta/site-verification" . }}
   {{ partial "meta/favicon" . }}
   {{ .Hugo.Generator }}
 
   <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:url" content="{{ .Permalink }}" />
 
   <!-- Font Fira Sans -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500">
