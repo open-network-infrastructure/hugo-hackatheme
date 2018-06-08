@@ -1,0 +1,155 @@
+<section id="schedule" class="schedule container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <div class="card my-3">
+        <div class="card-body">
+          <h3 class="card-title text-center text-uppercase">
+            <b>{{ i18n "schedule" }}</b>
+          </h3>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <header>
+                <div class="event-primary-text">01</div>
+                <div><b>January</b></div>
+              </header>
+            </div>
+            <div class="col-sm-9">
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th class="w-50">{{ .Site.Params.venue.name }}</th>
+                    <td class="w-25">
+                      {{- with .Site.Params.venue }}
+                        {{- with .coords }}
+                          <a href="https://www.openstreetmap.org/#map={{ .mapboxzoom }}/{{ .latitude }}/{{ .longitude }}" target="_blank">
+                        {{ end }}
+                        <b>{{ .street }}<br/>{{ .zipcode }} {{ .city }}</b>
+                        <i class="fa fa-map-marker"></i>
+                        {{- with .coords }}
+                          </a>
+                        {{ end }}
+                      {{ end }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      17:00
+                    </th>
+                    <td>
+                      Open doors
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      18:00
+                      <br />|
+                      <br />19:30
+                    </th>
+                    <td>
+                      Introduction
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      19:30
+                      <br />|
+                      <br />23:00
+                    </th>
+                    <td>
+                      End
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <div class="col-sm-3">
+              <header>
+                <div class="event-primary-text">02</div>
+                <div><b>January</b></div>
+              </header>
+            </div>
+            <div class="col-sm-9">
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <th></th>
+                    <th class="w-50">{{ .Site.Params.venue.name }}</th>
+                    <td class="w-25">
+                      {{- with .Site.Params.venue }}
+                        {{- with .coords }}
+                          <a href="https://www.openstreetmap.org/#map={{ .mapboxzoom }}/{{ .latitude }}/{{ .longitude }}" target="_blank">
+                        {{ end }}
+                        <b>{{ .street }}<br/>{{ .zipcode }} {{ .city }}</b>
+                        <i class="fa fa-map-marker"></i>
+                        {{- with .coords }}
+                          </a>
+                        {{ end }}
+                      {{ end }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      09:00
+                    </th>
+                    <td>
+                      Open doors
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      10:00
+                    </th>
+                    <td>
+                      Project pitches
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      12:00
+                    </th>
+                    <td>
+                      Lunch
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      16:30
+                    </th>
+                    <td>
+                      Final submission time!
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      16:30
+                    </th>
+                    <td>
+                      Final presentations
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
