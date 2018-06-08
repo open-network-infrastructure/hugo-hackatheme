@@ -167,3 +167,26 @@ footer.page-footer .footer-copyright {
     }
   }
 
+/* Schedule style */
+.schedule .table {
+  border-left: #1f1f1f 0.8rem solid;
+}
+
+.schedule .table th {
+  font-weight: 700;
+}
+
+.schedule .table td {
+  font-weight: 200;
+  vertical-align: middle;
+}
+
+.schedule header div {
+  font-weight: 500;
+  line-height: 0.8;
+  font-size: 2rem;
+  text-align: right;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
