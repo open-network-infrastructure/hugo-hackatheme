@@ -1,3 +1,13 @@
+# Translations for the 'Hero header'
+[event_name]
+other = "[Name of your Hackathon]"
+
+[event_city]
+other = "[City]"
+
+[event_slogan]
+other = "[Slogan of your Hackathon]"
+
 # Translations for the 'Basic info' section
 [basicinfo_claim]
 other = "[One catchy tagline for your event]"
