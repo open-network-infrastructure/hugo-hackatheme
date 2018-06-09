@@ -25,6 +25,15 @@ other = "Wanna organize this in your city?"
 [footer_template_link]
 other = "Check out the [template & guide](https://github.com/open-network-infrastructure/hugo-hackatheme)."
 
+# 404 translations
+[404_title]
+other = "Sorry, nothing here..."
+
+[404_text]
+other = """You know that page you were looking for? Well... it's gone.
+
+But we have a pretty GIF for you instead. ❤️"""
+
 # Generic site-wide translations
 [read_more]
 other = "Read more details"

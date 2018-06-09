@@ -20,6 +20,7 @@ It is also a **meta-project** in the sense that it includes documentation on how
 * Sponsors/partners list
 * Press kit
 * Google Analytics
+* Custom 404 page
 
 ## Installation
 

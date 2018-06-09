@@ -1,0 +1,28 @@
+{{ define "hero-view" }}
+  {{ partial "page-hero-view.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main">
+
+  <section class="container info">
+    <div class="row">
+      <div class="col-lg-9">
+        <!-- Card -->
+        <div class="card free-bird mb-5">
+          <img src="/images/404.gif" class="card-img-top">
+          <div class="card-body">
+            <article class="card-text">
+              <h3 class="text-uppercase">{{ i18n "404_title" }}</h3>
+              {{ i18n "404_text" | markdownify }}
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+{{ end }}
