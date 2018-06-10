@@ -1,4 +1,4 @@
-{{ if .Site.Params.team }}
+{{ if .Site.Params.team.members }}
 <section id="team" class="team container">
   <div class="card my-3">
     <div class="card-body">
@@ -11,7 +11,7 @@
       </div>
 
       <div class="row card-body">
-        {{ range .Site.Params.team }}
+        {{ range .Site.Params.team.members }}
           <figure class="figure">
             <img src="{{ .photo | relURL }}" class="rounded-circle z-depth-1"/>
             <figcaption class="figure-caption event-primary-text mt-2">{{ .name }}</figcaption>

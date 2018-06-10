@@ -123,33 +123,34 @@
       }, delta);
     };
 
+    {{ if eq .Site.Params.team.order "random" }}
     // https://j11y.io/javascript/shuffling-the-dom/
     // Licensed under the UNLICENSE.ORG license
     // http://unlicense.org/
     function shuffle(elems) {
-        allElems = (function () {
-          var ret = [], l = elems.length;
-          while (l--) { ret[ret.length] = elems[l]; }
-          return ret;
-        })();
+      allElems = (function () {
+        var ret = [], l = elems.length;
+        while (l--) { ret[ret.length] = elems[l]; }
+        return ret;
+      })();
 
-        var shuffled = (function () {
-          var l = allElems.length, ret = [];
-          while (l--) {
-            var random = Math.floor(Math.random() * allElems.length),
-              randEl = allElems[random].cloneNode(true);
-            allElems.splice(random, 1);
-            ret[ret.length] = randEl;
-          }
-          return ret;
-        })(), l = elems.length;
-
+      var shuffled = (function () {
+        var l = allElems.length, ret = [];
         while (l--) {
-          elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
-          elems[l].parentNode.removeChild(elems[l]);
+          var random = Math.floor(Math.random() * allElems.length),
+            randEl = allElems[random].cloneNode(true);
+          allElems.splice(random, 1);
+          ret[ret.length] = randEl;
         }
-      }
+        return ret;
+      })(), l = elems.length;
 
+      while (l--) {
+        elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
+        elems[l].parentNode.removeChild(elems[l]);
+      }
+    }
+    {{ end }}
 
     document.addEventListener('DOMContentLoaded', function () {
       // Initialize typewriter text rotation
@@ -181,8 +182,10 @@
         },
       });
 
+      {{ if eq .Site.Params.team.order "random" }}
       // Shuffle team members
       shuffle(document.querySelectorAll('.team .figure'))
+      {{ end }}
     }, false);
   </script>
 
