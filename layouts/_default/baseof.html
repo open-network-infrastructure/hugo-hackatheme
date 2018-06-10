@@ -80,8 +80,8 @@
   <!-- Swiper Javascript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
 
-  <!-- Based on https://codepen.io/CheeseTurtle/pen/jzdgI -->
   <script type="text/javascript">
+    // TypewriterText is based on https://codepen.io/CheeseTurtle/pen/jzdgI
     var TypewriterText = function (el, toRotate, period) {
       this.toRotate = toRotate;
       this.el = el;
@@ -123,6 +123,34 @@
       }, delta);
     };
 
+    // https://j11y.io/javascript/shuffling-the-dom/
+    // Licensed under the UNLICENSE.ORG license
+    // http://unlicense.org/
+    function shuffle(elems) {
+        allElems = (function () {
+          var ret = [], l = elems.length;
+          while (l--) { ret[ret.length] = elems[l]; }
+          return ret;
+        })();
+
+        var shuffled = (function () {
+          var l = allElems.length, ret = [];
+          while (l--) {
+            var random = Math.floor(Math.random() * allElems.length),
+              randEl = allElems[random].cloneNode(true);
+            allElems.splice(random, 1);
+            ret[ret.length] = randEl;
+          }
+          return ret;
+        })(), l = elems.length;
+
+        while (l--) {
+          elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
+          elems[l].parentNode.removeChild(elems[l]);
+        }
+      }
+
+
     document.addEventListener('DOMContentLoaded', function () {
       // Initialize typewriter text rotation
       var elements = document.getElementsByClassName('typewriter-text-rotate');
@@ -152,6 +180,9 @@
           prevEl: '.swiper-button-prev',
         },
       });
+
+      // Shuffle team members
+      shuffle(document.querySelectorAll('.team .figure'))
     }, false);
   </script>
 
