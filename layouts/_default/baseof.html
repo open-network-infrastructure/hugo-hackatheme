@@ -44,10 +44,10 @@
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="{{ "/css/mdb.css" | relURL }}">
   <!-- Hackatheme CSS -->
-  <link rel="stylesheet" href="{{ "/css/theme.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "/css/theme.css" | relURL }}?{{ now.Unix }}">
   <!-- Custom CSS -->
   {{ with .Site.Params.Styling.customCSS }}
-  <link rel="stylesheet" href="{{ . | relURL }}">
+  <link rel="stylesheet" href="{{ . | relURL }}?{{ now.Unix }}">
   {{ end }}
 
   {{ "<!--[if lt IE 9]>" | safeHTML }}
