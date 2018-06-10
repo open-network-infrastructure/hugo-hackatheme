@@ -12,6 +12,14 @@ other = "[Slogan of your Hackathon]"
 [basicinfo_claim]
 other = "[One catchy tagline for your event]"
 
+[basicinfo_what_is_it]
+other = """[Paragraph describing what is the
+main topic and motivation of your event]."""
+
+[basicinfo_when_where]
+other = """[Paragraph describing the general timeframe
+during which the event will take place.]"""
+
 [basicinfo_organizers]
 other = """[Paragraph describing briefly who are
 the organizers of the event]."""
@@ -59,3 +67,9 @@ other = "Sponsors and Partners"
 
 [community-partners]
 other = "Community partners"
+
+[team]
+other = "Team"
+
+[team_description]
+other = """This event is possible thanks to the contribution of an awesome team."""
