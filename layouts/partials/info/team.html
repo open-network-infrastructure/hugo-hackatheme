@@ -13,7 +13,7 @@
       <div class="row card-body">
         {{ range .Site.Params.team.members }}
           <figure class="figure">
-            <img src="{{ .photo | relURL }}" class="rounded-circle z-depth-1"/>
+            <img src="{{ .photo | relURL }}" class="rounded-circle z-depth-1" alt="{{ .name }}"/>
             <figcaption class="figure-caption event-primary-text mt-2">{{ .name }}</figcaption>
           </figure>
         {{ end }}
