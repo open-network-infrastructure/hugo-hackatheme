@@ -190,6 +190,15 @@ footer.page-footer .footer-copyright {
   text-transform: capitalize;
 }
 
+.scheduled-time {
+  width: 15%;
+}
+.scheduled-title {
+  width: 65%;
+}
+.scheduled-notes {
+  width: 20%;
+}
 /* Team */
 .team .card-body {
   justify-content: center; }
