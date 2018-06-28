@@ -35,6 +35,13 @@
                   </div>
                   <div class="challenge-text">
                     {{ i18n ( printf "challenges_%s_%s" .i18n "description" ) | markdownify}}
+                    {{ with .url }}
+                      <a href="{{ . | relLangURL }}">
+                        <button type="button" class="btn btn-sm event-primary-color waves-effect waves-light m-0">
+                          {{ i18n "read_more" }}
+                        </button>
+                      </a>
+                    {{ end }}
                   </div>
                 </div>
               </div>

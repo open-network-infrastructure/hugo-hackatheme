@@ -54,7 +54,7 @@ But we have a pretty GIF for you instead. ❤️"""
 
 # Generic site-wide translations
 [read_more]
-other = "Read more details"
+other = "More details"
 
 [download]
 other = "Download"
