@@ -27,7 +27,7 @@
     <meta name="theme-color" content="{{ . }}">{{ end }}
   {{ partial "meta/site-verification" . }}
   {{ partial "meta/favicon" . }}
-  {{ .Hugo.Generator }}
+  {{ hugo.Generator }}
 
   <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
