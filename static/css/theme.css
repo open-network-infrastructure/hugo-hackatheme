@@ -212,3 +212,28 @@ footer.page-footer .footer-copyright {
       font-size: 0.7rem;
       text-align: center;
     }
+
+
+/* Features */
+.feature {
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  margin-right: -12px;
+  margin-left: -12px;
+  opacity: 0.8;
+  border-radius: 4px; }
+  .feature:hover {
+    opacity: 1; }
+  .feature i {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .feature h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin: 0.4rem 0 0 0; }
+  .feature p {
+    font-size: 0.7rem;
+    font-weight: 200; }

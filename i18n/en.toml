@@ -73,3 +73,6 @@ other = "Team"
 
 [team_description]
 other = """This event is possible thanks to the contribution of an awesome team."""
+
+[features]
+other = "What you will find"

@@ -1,0 +1,40 @@
+{{ if .Site.Params.features }}
+
+<section id="features" class="features container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <!-- Card -->
+      <div class="card mb-3">
+        <div class="card-body">
+
+          <h3 class="card-title text-center text-uppercase">
+            <b>{{ i18n "features" }}</b>
+          </h3>
+
+          <div class="row card-body">
+            {{ range .Site.Params.features }}
+              <div class="col-md-6 my-1">
+                <div class="feature row" style="background-image: url('{{ .background }}')">
+                  <div class="feature-icon col-3">
+                    <i class="fa {{ .icon }}"></i>
+                  </div>
+                  <div class="feature-text col-9">
+                    <h4>{{ i18n ( printf "features_%s_%s" .name "title" )}}</h4>
+                    <p>{{ i18n ( printf "features_%s_%s" .name "description" ) | markdownify}}</p>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{ end }}
