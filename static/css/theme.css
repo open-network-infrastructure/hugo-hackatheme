@@ -218,22 +218,24 @@ footer.page-footer .footer-copyright {
 .feature {
   background-position: center center;
   background-size: cover;
-  color: white;
   margin-right: -12px;
   margin-left: -12px;
-  opacity: 0.8;
-  border-radius: 4px; }
+  color: white;
+  opacity: 0.9;
+  border-radius: 4px;
+  min-height: 10rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
   .feature:hover {
     opacity: 1; }
-  .feature i {
-    font-size: 3rem;
-    padding: 1rem;
-  }
   .feature h4 {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    margin: 0.4rem 0 0 0; }
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    font-size: 1.5rem;
+    margin: 7rem 0 0 0;
+    padding: 0.4rem; }
   .feature p {
-    font-size: 0.7rem;
-    font-weight: 200; }
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.6rem 0.7rem; }
