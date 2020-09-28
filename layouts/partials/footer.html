@@ -7,7 +7,7 @@
       <!--First column-->
       <div class="col-md-4 mb-5">
         <h6 class="text-uppercase font-weight-bold">
-          {{ i18n "event_name" | plainify }}
+          {{ i18n "event_name" | markdownify }}
         </h6>
         <hr class="event-primary-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         {{ with i18n "basicinfo_organizers" | default (i18n "event_slogan") }}
@@ -62,7 +62,7 @@
       {{ i18n "footer_template_link" | markdownify }}
     </p>
 
-    &copy; {{ i18n "event_name" | plainify -}}
+    &copy; {{ i18n "event_name" | markdownify -}}
     {{ with .Site.Params.license -}}
       , <a href="{{ .url }}" target="_blank">{{ .name }}</a>
     {{ end }}
