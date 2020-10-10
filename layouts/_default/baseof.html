@@ -53,7 +53,7 @@
     {{ $css = $css | append $cssCustom }}
   {{ end }}
 
-  {{ $css := $css | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $css := $css | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
   {{ "<!--[if lt IE 9]>" | safeHTML }}
