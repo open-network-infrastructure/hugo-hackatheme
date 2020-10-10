@@ -42,16 +42,23 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="{{ "/css/mdb.css" | relURL }}">
+  {{ $cssMaterialDesign := resources.Get "css/mdb.css" }}
   <!-- Hackatheme CSS -->
-  <link rel="stylesheet" href="{{ "/css/theme.css" | relURL }}?{{ now.Unix }}">
+  {{ $cssTheme := resources.Get "css/theme.css" }}
+  {{ $css := slice $cssMaterialDesign $cssTheme  }}
+
   <!-- Custom CSS -->
   {{ with .Site.Params.Styling.customCSS }}
-  <link rel="stylesheet" href="{{ . | relURL }}?{{ now.Unix }}">
+    {{ $cssCustom := resources.Get . }}
+    {{ $css = $css | append $cssCustom }}
   {{ end }}
 
+  {{ $css := $css | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
   {{ "<!--[if lt IE 9]>" | safeHTML }}
-    <script src="js/html5shiv.js"></script>
+    {{ $jsHtml5Shiv := resources.Get "js/html5shiv.js" }}
+    <script src="{{ $jsHtml5Shiv.RelPermalink }}"></script>
   {{ "<![endif]-->" | safeHTML }}
 
 </head>
