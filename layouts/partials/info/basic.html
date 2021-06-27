@@ -12,8 +12,8 @@
           </h2>
           <h3 class="text-uppercase pb-5">
             <b>
-              {{ $startDate := .Param "dateStart" }}
-              {{ $endDate := .Param "dateEnd" }}
+              {{ $startDate := .Param "dateStart" | time }}
+              {{ $endDate := .Param "dateEnd" | time }}
               {{ if eq $startDate.Month $endDate.Month }}
                  {{ $startDate.Format "January 2" }}-{{ $endDate.Format "2" -}}
               {{ else }}
