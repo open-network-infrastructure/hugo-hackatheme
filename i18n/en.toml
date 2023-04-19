@@ -25,7 +25,7 @@ other = """[Paragraph describing briefly who are
 the organizers of the event]."""
 
 [basicinfo_what_is_it_title]
-other = "What is it?"
+other = "FAQ"
 
 [basicinfo_when_where_title]
 other = "When and where?"
