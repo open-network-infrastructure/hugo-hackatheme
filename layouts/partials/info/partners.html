@@ -1,8 +1,9 @@
 <!-- Partners -->
 <section id="partners" class="container">
-  {{ if .Site.Params.partners.sponsors }}
   <div class="card my-3">
     <div class="card-body">
+  
+    {{ if .Site.Params.partners.sponsors }}
       <h3 class="card-title text-center text-uppercase">
         <b>{{ i18n "sponsors-partners" }}</b>
       </h3>
@@ -14,14 +15,10 @@
           </div>
         {{ end }}
       </div>
+    {{ end }}
 
-    </div>
-  </div>
-  {{ end }}
-
-  {{ if .Site.Params.partners.community }}
-  <div class="card my-3">
-    <div class="card-body">
+    {{ if .Site.Params.partners.community }}
+      <hr>
       <h3 class="card-title text-center text-uppercase">
         <b>{{ i18n "community-partners" }}</b>
       </h3>
@@ -33,9 +30,9 @@
           </div>
         {{ end }}
       </div>
+    {{ end }}
 
     </div>
   </div>
-  {{ end }}
 
 </section>
